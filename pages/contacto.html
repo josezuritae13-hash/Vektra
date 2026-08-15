@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VEKTRA | Contacto</title>
+  <meta name="description" content="Servicios de rastreo satelital GPS de VEKTRA para vehículos livianos, transporte pesado, pasajeros, encomiendas, maquinaria, mascotas y personas." />
+  <meta name="theme-color" content="#2563EB" />
+  <link rel="icon" href="../assets/Logo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: "Montserrat", sans-serif; }
+    .fade-in-up { animation: fadeInUp .9s cubic-bezier(.22,1,.36,1) both; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+  </style>
+</head>
+
+<body class="text-slate-900 overflow-x-hidden selection:bg-blue-600 selection:text-white">
+
+  <!-- Decorative background -->
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-28 -left-24 h-80 w-80 rounded-full bg-blue-400/20 blur-3xl"></div>
+    <div class="absolute top-32 right-0 h-[28rem] w-[28rem] rounded-full bg-indigo-400/20 blur-3xl"></div>
+    <div class="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
+    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="sticky top-0 z-50 transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mt-4 rounded-3xl border border-white/60 bg-white/70 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+        <nav class="flex items-center justify-between px-4 py-3 sm:px-6" aria-label="Principal">
+          <a href="../index.html#inicio" class="flex items-center gap-3">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-lg shadow-blue-500/20">
+              <img src="../assets/Logo.png" alt="Logo VEKTRA" class="h-10 w-10 rounded-2xl object-cover" />
+            </div>
+            <div class="leading-tight">
+              <p class="text-base font-black tracking-[0.22em] text-blue-600">VEKTRA</p>
+              <p class="text-xs font-semibold text-slate-500">Su ubicación, tu tranquilidad</p>
+            </div>
+          </a>
+
+          <div class="hidden items-center gap-10 lg:flex">
+            <a href="../index.html#inicio" class="text-sm font-semibold text-slate-600 transition hover:text-blue-600">Inicio</a>
+            <a href="servicios.html" class="text-sm font-semibold text-slate-600 transition hover:text-blue-600">Servicios</a>
+            <a href="nosotros.html" class="text-sm font-semibold text-slate-600 transition hover:text-blue-600">Nosotros</a>
+            <a href="contacto.html" class="text-sm font-semibold text-blue-600 transition">Contacto</a>
+          </div>
+
+          <button id="menuBtn" class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:bg-slate-50 lg:hidden" aria-label="Abrir menú" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </nav>
+
+        <div id="mobileMenu" class="hidden border-t border-slate-200/70 px-4 pb-4 lg:hidden" aria-hidden="true">
+          <div class="mt-3 grid gap-2 rounded-2xl bg-white p-3 shadow-sm">
+            <div class="flex items-center justify-end">
+              <button id="menuCloseBtn" class="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-slate-500 transition hover:bg-slate-100 hover:text-slate-900" aria-label="Cerrar menú">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <a href="../index.html#inicio" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-blue-600">Inicio</a>
+            <a href="servicios.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-blue-600" >Servicios</a>
+            <a href="nosotros.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-blue-600 transition bg-blue-50">Nosotros</a>
+            <a href="contacto.html" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-blue-600">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main class="pt-10 sm:pt-14">
+
+
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
+    <section
+      class="relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6 lg:px-8"
+    >
+
+      <!-- Decoración -->
+
+      <div
+        class="pointer-events-none absolute -left-20 top-10 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl"
+      ></div>
+
+      <div
+        class="pointer-events-none absolute right-0 top-0 h-52 w-52 rounded-full bg-indigo-500/10 blur-3xl"
+      ></div>
+
+
+      <div class="fade-in-up relative max-w-3xl">
+
+        <!-- Badge -->
+
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-bold text-blue-700 shadow-sm"
+        >
+
+          <span
+            class="h-2.5 w-2.5 rounded-full bg-blue-600"
+          ></span>
+
+          Hablemos
+
+        </span>
+
+
+        <!-- Título -->
+
+        <h1
+          class="mt-7 text-4xl font-black leading-[1.05] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl"
+        >
+          Cuéntanos qué quieres rastrear
+        </h1>
+
+
+        <!-- Descripción -->
+
+        <p 
+          id="color-white" class="mt-6 max-w-2xl text-base font-medium leading-8 text-slate-600 sm:text-lg"
+        >
+          Escríbenos por WhatsApp o llena el formulario y te contactamos con
+          el plan de rastreo GPS ideal para tu vehículo, flota, maquinaria, personas o mascota.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CONTACTO
+    ==================================================== -->
+
+    <section
+      class="mx-auto mt-14 max-w-7xl px-4 pb-24 sm:px-6 lg:px-8"
+    >
+
+      <div class="grid gap-6 lg:grid-cols-5">
+
+
+        <!-- =================================================
+             COLUMNA INFORMACIÓN
+        ================================================== -->
+
+        <div class="flex flex-col gap-6 lg:col-span-2">
+
+
+          <!-- WHATSAPP -->
+
+          <a
+            href="https://wa.me/593998870608"
+            target="_blank"
+            rel="noopener"
+            class="group relative overflow-hidden rounded-[1.75rem] border border-slate-200/80 bg-white/80 p-7 shadow-[0_20px_50px_rgba(15,23,42,0.07)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-green-200 hover:shadow-[0_25px_60px_rgba(37,211,102,0.12)]"
+          >
+
+            <div
+              class="absolute -right-10 -top-10 hidden h-36 w-36 rounded-full border border-blue-200/50 sm:block"
+            ></div>
+
+            <div
+              class="relative flex items-center gap-4"
+            >
+
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-green-50 text-[#25D366]"
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                >
+
+                  <path
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.63 1.44 5.16L2 22l5.08-1.53a9.9 9.9 0 0 0 4.96 1.33h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.1.11-1.78-.11-.41-.13-.94-.3-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94s.72-2.09.98-2.37c.24-.28.53-.34.71-.34h.5c.16 0 .38-.06.59.45.24.58.82 2 .89 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.8.87-1.07.19-.28.37-.23.62-.14.26.09 1.64.77 1.92.91.28.14.47.21.53.33.07.12.07.68-.17 1.36Z"
+                  />
+
+                </svg>
+
+              </div>
+
+
+              <div>
+
+                <p
+                  class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400"
+                >
+                  WhatsApp
+                </p>
+
+                <p
+                  class="mt-1 font-mono-vk text-lg font-bold text-slate-900"
+                >
+                  VEKTRA GPS
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <p
+              class="relative mt-4 text-sm font-medium leading-6 text-slate-500"
+            >
+              Escríbenos directamente y te respondemos lo antes posible.
+            </p>
+
+          </a>
+
+
+          <!-- COBERTURA -->
+
+          <div
+            class="rounded-[1.75rem] border border-slate-200/80 bg-white/80 p-7 shadow-[0_20px_50px_rgba(15,23,42,0.07)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-blue-200"
+          >
+
+            <p
+              class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400"
+            >
+              Cobertura
+            </p>
+
+            <p
+              class="mt-2 text-lg font-black text-slate-900"
+            >
+              Todo Ecuador
+            </p>
+
+            <p
+              class="mt-3 font-mono-vk text-xs font-semibold text-slate-400"
+            >
+              -0.1807° S, 78.4678° W · Quito
+            </p>
+
+          </div>
+
+
+          <!-- REDES -->
+
+          <div
+            class="rounded-[1.75rem] border border-slate-200/80 bg-white/80 p-7 shadow-[0_20px_50px_rgba(15,23,42,0.07)] backdrop-blur-xl"
+          >
+
+            <p
+              class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400"
+            >
+              Síguenos
+            </p>
+
+
+            <div class="mt-4 flex items-center gap-3">
+
+              <!-- Facebook -->
+
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:-translate-y-1 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="h-4 w-4"
+                  fill="currentColor"
+                >
+
+                  <path
+                    d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.9h-2.34V22c4.78-.8 8.44-4.95 8.44-9.94Z"
+                  />
+
+                </svg>
+
+              </a>
+
+
+              <!-- Instagram -->
+
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:-translate-y-1 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="h-4 w-4"
+                  fill="currentColor"
+                >
+
+                  <path
+                    d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.59 1.8c.46-.16 1.26-.35 2.43-.4C9.29 2.21 9.67 2.2 12 2.2ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.17 1.17 0 1 0 0-2.33 1.17 1.17 0 0 0 0 2.33Z"
+                  />
+
+                </svg>
+
+              </a>
+
+
+              <!-- TikTok -->
+
+              <a
+                href="#"
+                aria-label="TikTok"
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:-translate-y-1 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="h-4 w-4"
+                  fill="currentColor"
+                >
+
+                  <path
+                    d="M16.6 2h-3.2v13.7c0 1.5-1.2 2.7-2.7 2.7a2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.3 0 .6.05.9.14V9.9a6 6 0 0 0-.9-.07 6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6V8.3a8.1 8.1 0 0 0 4.9 1.65V6.75A4.85 4.85 0 0 1 16.6 2Z"
+                  />
+
+                </svg>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FORMULARIO
+        ================================================== -->
+
+        <div
+          class="relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/80 p-7 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:p-10 lg:col-span-3"
+        >
+
+          <!-- Decoración -->
+
+          <div
+            class="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full border border-blue-200/40"
+          ></div>
+
+          <div
+            class="pointer-events-none absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-blue-500/10 blur-3xl"
+          ></div>
+
+
+          <!-- Título -->
+
+          <p
+            class="relative text-xs font-bold uppercase tracking-[0.22em] text-blue-600"
+          >
+            Formulario
+          </p>
+
+          <h2
+            class="relative mt-3 text-2xl font-black text-slate-900 sm:text-3xl"
+          >
+            Escríbenos y te contactamos
+          </h2>
+
+          <p
+            class="relative mt-2 text-sm font-medium text-slate-500"
+          >
+            Al enviar, se abre WhatsApp con tu mensaje listo para enviar.
+          </p>
+
+
+          <!-- FORM -->
+
+          <form
+            id="contactForm"
+            class="relative mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2"
+          >
+
+
+            <!-- NOMBRE -->
+
+            <div>
+
+              <label
+                for="nombre"
+                class="block text-sm font-semibold text-slate-700"
+              >
+                Nombre completo
+              </label>
+
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                required
+                autocomplete="name"
+                placeholder="Tu nombre"
+                class="mt-2 block w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+              />
+
+            </div>
+
+
+            <!-- TELEFONO -->
+
+            <div>
+
+              <label
+                for="telefono"
+                class="block text-sm font-semibold text-slate-700"
+              >
+                Teléfono / WhatsApp
+              </label>
+
+              <input
+                id="telefono"
+                name="telefono"
+                type="tel"
+                required
+                autocomplete="tel"
+                placeholder="099 999 9999"
+                class="mt-2 block w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+              />
+
+            </div>
+
+
+            <!-- SERVICIO -->
+
+            <div class="sm:col-span-2">
+
+              <label
+                for="servicio"
+                class="block text-sm font-semibold text-slate-700"
+              >
+                Servicio de rastreo de tu interés
+              </label>
+
+              <select
+                id="servicio"
+                name="servicio"
+                class="mt-2 block w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+              >
+
+                <option value="">
+                  Selecciona una opción
+                </option>
+
+                <option value="Vehículos livianos">
+                  Vehículos livianos
+                </option>
+
+                <option value="Transporte pesado">
+                  Transporte pesado
+                </option>
+
+                <option value="Transporte de pasajeros">
+                  Transporte de pasajeros
+                </option>
+
+                <option value="Transporte de encomiendas">
+                  Transporte de encomiendas
+                </option>
+
+                <option value="Maquinaria">
+                  Maquinaria
+                </option>
+
+                <option value="Mascotas y animales de granja">
+                  Mascotas y animales de granja
+                </option>
+
+                <option value="Personas">
+                  Personas
+                </option>
+
+                <option value="Otro">
+                  Otro
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- MENSAJE -->
+
+            <div class="sm:col-span-2">
+
+              <label
+                for="mensaje"
+                class="block text-sm font-semibold text-slate-700"
+              >
+                Mensaje
+              </label>
+
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="Cuéntanos qué necesitas rastrear"
+                class="mt-2 block w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
+              ></textarea>
+
+            </div>
+
+
+            <!-- BOTÓN -->
+
+            <div class="sm:col-span-2">
+
+              <button
+                type="submit"
+                class="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#0243BB] to-[#3394F4] px-7 py-4 text-sm font-bold text-white shadow-lg shadow-blue-500/25 transition duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/30 active:translate-y-0"
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="h-5 w-5"
+                  fill="currentColor"
+                >
+
+                  <path
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.63 1.44 5.16L2 22l5.08-1.53a9.9 9.9 0 0 0 4.96 1.33h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.1.11-1.78-.11-.41-.13-.94-.3-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94s.72-2.09.98-2.37c.24-.28.53-.34.71-.34h.5c.16 0 .38-.06.59.45.24.58.82 2 .89 2.14.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.8.87-1.07.19-.28.37-.23.62-.14.26.09 1.64.77 1.92.91.28.14.47.21.53.33.07.12.07.68-.17 1.36Z"
+                  />
+
+                </svg>
+
+                Enviar por WhatsApp
+
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-lg shadow-blue-500/20">
+              <img src="assets/Logo.png" alt="Logo VEKTRA" class="h-10 w-10 rounded-2xl object-cover" />
+            </div>
+            <p id="logo-text" class="text-base font-black tracking-[0.22em] text-slate-400">VEKTRA</p>
+          </div>
+          <p id="logo-text" class="text-xs font-semibold text-slate-500">Su ubicación, tu tranquilidad</p>
+          <p id="descripcion-text" class="mt-4 max-w-xs text-sm leading-6 text-slate-500">
+            Rastreo satelital GPS y administración de flotas para vehículos, transporte, maquinaria, mascotas y personas en Ecuador.
+          </p>
+          <p class="geo-chip mt-4 text-xs font-semibold text-slate-400">-0.1807° S, 78.4678° W · Quito, Ecuador</p>
+        </div>
+
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">Navegación</p>
+          <div class="mt-4 flex flex-col gap-3">
+            <a href="#inicio" class="text-sm font-semibold hover:text-blue-600">Inicio</a>
+            <a href="pages/servicios.html" class="text-sm font-semibold hover:text-blue-600">Servicios</a>
+            <a href="pages/nosotros.html" class="text-sm font-semibold hover:text-blue-600">Nosotros</a>
+            <a href="pages/contacto.html" class="text-sm font-semibold hover:text-blue-600">Contacto</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">Enlaces</p>
+          <div class="mt-4 flex flex-col gap-3">
+            <a href="condiciones_vektragps.pdf" class="text-sm font-semibold hover:text-blue-600">Términos y condiciones</a>
+            <a href="pages/garantia.html" class="text-sm font-semibold hover:text-blue-600">Eliminación de datos de usuario</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">Contacto</p>
+          <div class="mt-4 flex flex-col gap-3">
+            <a href="https://wa.me/593998870608" target="_blank" rel="noopener" class="text-sm font-semibold hover:text-blue-600">WhatsApp: 0998 870 608</a>
+            <span class="geo-chip text-sm font-semibold ">vektragps.com</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">Síguenos</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" aria-label="Facebook" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-blue-200 hover:text-blue-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.9h-2.34V22c4.78-.8 8.44-4.95 8.44-9.94Z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-blue-200 hover:text-blue-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.59 1.8c.46-.16 1.26-.35 2.43-.4C9.29 2.21 9.67 2.2 12 2.2ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.17 1.17 0 1 0 0-2.33 1.17 1.17 0 0 0 0 2.33Z"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-blue-200 hover:text-blue-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M16.6 2h-3.2v13.7c0 1.5-1.2 2.7-2.7 2.7a2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.3 0 .6.05.9.14V9.9a6 6 0 0 0-.9-.07 6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6V8.3a8.1 8.1 0 0 0 4.9 1.65V6.75A4.85 4.85 0 0 1 16.6 2Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-8 sm:flex-row">
+        <p class="text-xs font-medium text-slate-400">© 2026 VEKTRA. Todos los derechos reservados.</p>
+        <p class="geo-chip text-xs font-medium text-slate-400">GPS ACTIVO · SEÑAL 100%</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+
+  <script src="../app.js"></script>
+
+  <script src="../contacto.js"></script>
+
+</body>
+
+</html>

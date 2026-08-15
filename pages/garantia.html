@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>VEKTRA | Eliminación de datos</title>
+
+  <meta
+    name="description"
+    content="Solicita la eliminación de tu cuenta y de tus datos personales asociados a los servicios de VEKTRA."
+  />
+
+  <meta name="theme-color" content="#2563EB" />
+
+  <link rel="icon" href="../assets/Logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.9s cubic-bezier(.22, 1, .36, 1) both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px) scale(.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white">
+
+  <!-- =========================================================
+       FONDO DECORATIVO
+  ========================================================== -->
+  <div
+    class="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+    aria-hidden="true"
+  >
+    <div class="absolute -left-24 -top-28 h-80 w-80 rounded-full bg-blue-400/20 blur-3xl"></div>
+
+    <div class="absolute right-0 top-32 h-[28rem] w-[28rem] rounded-full bg-indigo-400/20 blur-3xl"></div>
+
+    <div class="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
+
+    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"></div>
+  </div>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+  <header id="header" class="sticky top-0 z-50 transition-all duration-300">
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <div
+        class="mt-4 rounded-3xl border border-white/60 bg-white/70 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl"
+      >
+
+        <nav
+          class="flex items-center justify-between px-4 py-3 sm:px-6"
+          aria-label="Navegación principal"
+        >
+
+          <!-- LOGO -->
+          <a
+            href="../index.html#inicio"
+            class="flex items-center gap-3"
+            aria-label="VEKTRA - Página de inicio"
+          >
+
+            <div
+              class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-lg shadow-blue-500/20"
+            >
+              <img
+                src="../assets/Logo.png"
+                alt="Logo de VEKTRA"
+                class="h-10 w-10 rounded-2xl object-cover"
+              />
+            </div>
+
+            <div class="leading-tight">
+              <p class="text-base font-black tracking-[0.22em] text-blue-600">
+                VEKTRA
+              </p>
+
+              <p class="text-xs font-semibold text-slate-500">
+                Su ubicación, tu tranquilidad
+              </p>
+            </div>
+
+          </a>
+
+
+          <!-- NAVEGACIÓN DESKTOP -->
+          <div class="hidden items-center gap-10 lg:flex">
+
+            <a
+              href="../index.html#inicio"
+              class="text-sm font-semibold text-slate-600 transition hover:text-blue-600"
+            >
+              Inicio
+            </a>
+
+            <a
+              href="servicios.html"
+              class="text-sm font-semibold text-slate-600 transition hover:text-blue-600"
+            >
+              Servicios
+            </a>
+
+            <a
+              href="nosotros.html"
+              class="text-sm font-semibold text-slate-600 transition hover:text-blue-600"
+            >
+              Nosotros
+            </a>
+
+            <a
+              href="contacto.html"
+              class="text-sm font-semibold text-slate-600 transition hover:text-blue-600"
+            >
+              Contacto
+            </a>
+
+          </div>
+
+
+          <!-- BOTÓN MENÚ -->
+          <button
+            id="menuBtn"
+            type="button"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:bg-slate-50 lg:hidden"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+
+          </button>
+
+        </nav>
+
+
+        <!-- MENÚ MÓVIL -->
+        <div
+          id="mobileMenu"
+          class="hidden border-t border-slate-200/70 px-4 pb-4 lg:hidden"
+          aria-hidden="true"
+        >
+
+          <div class="mt-3 grid gap-2 rounded-2xl bg-white p-3 shadow-sm">
+
+            <div class="flex items-center justify-end">
+
+              <button
+                id="menuCloseBtn"
+                type="button"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-2xl text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
+                aria-label="Cerrar menú"
+              >
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M6 18L18 6M6 6l12 12" />
+                </svg>
+
+              </button>
+
+            </div>
+
+
+            <a
+              href="../index.html#inicio"
+              class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-blue-600"
+            >
+              Inicio
+            </a>
+
+            <a
+              href="servicios.html"
+              class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-blue-600"
+            >
+              Servicios
+            </a>
+
+            <a
+              href="nosotros.html"
+              class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-blue-600"
+            >
+              Nosotros
+            </a>
+
+            <a
+              href="contacto.html"
+              class="rounded-xl bg-blue-50 px-4 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-100"
+            >
+              Contacto
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL
+  ========================================================== -->
+  <main>
+
+    <!-- HERO -->
+    <section class="px-4 pb-12 pt-20 sm:px-6 lg:px-8">
+
+      <div class="mx-auto max-w-5xl text-center fade-in-up">
+
+        <!-- Badge -->
+        <div
+          class="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-bold text-blue-700"
+        >
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+            />
+          </svg>
+
+          Privacidad y protección de datos
+
+        </div>
+
+
+        <h1
+          class="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
+        >
+          Eliminación de datos
+        </h1>
+
+
+        <p
+          class="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg"
+        >
+          En VEKTRA respetamos tu privacidad. Aquí puedes conocer cómo
+          solicitar la eliminación de tu cuenta y de los datos asociados
+          a nuestros servicios.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTENIDO -->
+    <section class="px-4 pb-24 sm:px-6 lg:px-8">
+
+      <div class="mx-auto max-w-5xl">
+
+        <div
+          class="glass overflow-hidden rounded-[2rem] border border-white/70 shadow-[0_20px_70px_rgba(15,23,42,0.10)]"
+        >
+
+          <!-- CABECERA DE LA TARJETA -->
+          <div
+            class="border-b border-slate-200/70 bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-8 text-white sm:px-10"
+          >
+
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+              <div>
+
+                <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-100">
+                  Solicitud de eliminación
+                </p>
+
+                <h2 class="mt-2 text-2xl font-black sm:text-3xl">
+                  Garantía de eliminación de datos
+                </h2>
+
+              </div>
+
+
+              <div
+                class="inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-bold backdrop-blur"
+              >
+
+                <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+
+                Proceso seguro
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- CUERPO -->
+          <div class="space-y-10 px-6 py-8 sm:px-10 sm:py-10">
+
+
+            <!-- INTRODUCCIÓN -->
+            <div>
+
+              <p class="text-base leading-8 text-slate-600">
+
+                En <strong class="font-bold text-slate-900">VEKTRA</strong>,
+                la privacidad y seguridad de los datos de nuestros usuarios
+                son una prioridad. Ponemos a disposición este mecanismo para
+                que los usuarios puedan solicitar la eliminación de su cuenta
+                y de la información personal asociada a nuestros servicios.
+
+              </p>
+
+            </div>
+
+
+            <!-- PLAZO -->
+            <div
+              class="rounded-3xl border border-blue-100 bg-blue-50/70 p-6 sm:p-7"
+            >
+
+              <div class="flex gap-4">
+
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-500/20"
+                >
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path
+                      stroke-linecap="round"
+                      d="M12 7v5l3 2"
+                    />
+                  </svg>
+
+                </div>
+
+
+                <div>
+
+                  <h3 class="text-lg font-black text-slate-900">
+                    Plazo de ejecución
+                  </h3>
+
+                  <p class="mt-2 leading-7 text-slate-600">
+
+                    Una vez validada la identidad del solicitante,
+                    la solicitud será procesada y la eliminación de los
+                    datos de las bases de datos activas se completará en
+                    un plazo máximo de
+
+                    <strong class="font-extrabold text-blue-700">
+                      72 horas hábiles
+                    </strong>.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- DATOS -->
+            <div>
+
+              <div class="mb-6">
+
+                <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-600">
+                  Información eliminada
+                </p>
+
+                <h3 class="mt-2 text-2xl font-black text-slate-900">
+                  Datos que serán eliminados
+                </h3>
+
+                <p class="mt-2 leading-7 text-slate-600">
+                  La solicitud de eliminación puede incluir la siguiente
+                  información asociada a la cuenta:
+                </p>
+
+              </div>
+
+
+              <div class="grid gap-4 sm:grid-cols-2">
+
+
+                <!-- ITEM 1 -->
+                <div
+                  class="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+                >
+
+                  <div
+                    class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
+                  >
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM4 21a8 8 0 0116 0"
+                      />
+                    </svg>
+
+                  </div>
+
+                  <h4 class="font-extrabold text-slate-900">
+                    Información de la cuenta
+                  </h4>
+
+                  <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Nombre de usuario, correo electrónico y credenciales
+                    asociadas a la cuenta.
+                  </p>
+
+                </div>
+
+
+                <!-- ITEM 2 -->
+                <div
+                  class="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+                >
+
+                  <div
+                    class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
+                  >
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 20l-5.447-2.724A2 2 0 012.447 15.5V8.5a2 2 0 011.106-1.789L9 4m0 16V4m0 16l6 3V7l-6-3m6 3l6-3v14l-6 3"
+                      />
+                    </svg>
+
+                  </div>
+
+                  <h4 class="font-extrabold text-slate-900">
+                    Ubicaciones y rutas
+                  </h4>
+
+                  <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Historial de ubicaciones, rutas, geocercas y coordenadas
+                    GPS almacenadas por la aplicación.
+                  </p>
+
+                </div>
+
+
+                <!-- ITEM 3 -->
+                <div
+                  class="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+                >
+
+                  <div
+                    class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
+                  >
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                      />
+                    </svg>
+
+                  </div>
+
+                  <h4 class="font-extrabold text-slate-900">
+                    Configuraciones y contactos
+                  </h4>
+
+                  <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Teléfonos de contacto y configuraciones de alertas
+                    personalizadas asociadas al usuario.
+                  </p>
+
+                </div>
+
+
+                <!-- ITEM 4 -->
+                <div
+                  class="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+                >
+
+                  <div
+                    class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
+                  >
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect
+                        x="3"
+                        y="5"
+                        width="18"
+                        height="14"
+                        rx="2"
+                      />
+
+                      <path
+                        stroke-linecap="round"
+                        d="M7 9h10M7 13h6"
+                      />
+                    </svg>
+
+                  </div>
+
+                  <h4 class="font-extrabold text-slate-900">
+                    Dispositivos y vehículos
+                  </h4>
+
+                  <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Información y vínculos de los dispositivos o vehículos
+                    asociados a la cuenta.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- RETENCIÓN -->
+            <div
+              class="rounded-3xl border border-amber-200 bg-amber-50 p-6 sm:p-7"
+            >
+
+              <div class="flex gap-4">
+
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-500 text-white"
+                >
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"
+                    />
+                  </svg>
+
+                </div>
+
+
+                <div>
+
+                  <h3 class="text-lg font-black text-slate-900">
+                    Excepciones de retención
+                  </h3>
+
+                  <p class="mt-2 leading-7 text-slate-700">
+
+                    Por obligaciones legales, fiscales o para la prevención
+                    de fraudes, VEKTRA podrá conservar determinados registros
+                    mínimos cuando exista una obligación legal que lo
+                    requiera. Estos datos permanecerán restringidos,
+                    protegidos y serán utilizados únicamente para el
+                    cumplimiento de dichas obligaciones.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- SOLICITUD -->
+            <div
+              class="rounded-3xl border border-slate-200 bg-slate-900 p-6 text-white sm:p-8"
+            >
+
+              <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+
+                <div class="max-w-2xl">
+
+                  <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-400">
+                    ¿Quieres eliminar tus datos?
+                  </p>
+
+                  <h3 class="mt-2 text-2xl font-black">
+                    Solicita la eliminación de tu cuenta
+                  </h3>
+
+                  <p class="mt-3 leading-7 text-slate-300">
+                    Ponte en contacto con nuestro equipo para iniciar el
+                    proceso de validación y eliminación de tus datos.
+                  </p>
+
+                </div>
+
+
+                <a
+                  href="contacto.html"
+                  class="inline-flex shrink-0 items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-500"
+                >
+                  Solicitar eliminación
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 12h14M13 6l6 6-6 6"
+                    />
+                  </svg>
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- ACTUALIZACIÓN -->
+            <div class="border-t border-slate-200 pt-6">
+
+              <p class="text-center text-xs leading-6 text-slate-500">
+
+                <strong class="font-bold text-slate-700">
+                  Última actualización:
+                </strong>
+
+                agosto de 2026
+
+                <br />
+
+                VEKTRA se reserva el derecho de actualizar este procedimiento
+                cuando sea necesario para mejorar la protección de los datos
+                de sus usuarios o cumplir con las obligaciones aplicables.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="border-t border-slate-200 bg-white">
+
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+
+      <div
+        class="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left"
+      >
+
+        <div>
+
+          <p class="font-black tracking-[0.2em] text-blue-600">
+            VEKTRA
+          </p>
+
+          <p class="mt-1 text-sm text-slate-500">
+            Su ubicación, tu tranquilidad.
+          </p>
+
+        </div>
+
+
+        <div class="flex flex-wrap justify-center gap-5 text-sm">
+
+          <a
+            href="privacidad.html"
+            class="font-semibold text-slate-500 transition hover:text-blue-600"
+          >
+            Privacidad
+          </a>
+
+          <a
+            href="terminos.html"
+            class="font-semibold text-slate-500 transition hover:text-blue-600"
+          >
+            Términos
+          </a>
+
+          <a
+            href="contacto.html"
+            class="font-semibold text-slate-500 transition hover:text-blue-600"
+          >
+            Contacto
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="mt-6 border-t border-slate-100 pt-6 text-center">
+
+        <p class="text-xs text-slate-400">
+          © 2026 VEKTRA. Todos los derechos reservados.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       MENÚ MÓVIL
+  ========================================================== -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const menuCloseBtn = document.getElementById("menuCloseBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    function openMenu() {
+      mobileMenu.classList.remove("hidden");
+
+      mobileMenu.setAttribute("aria-hidden", "false");
+      menuBtn.setAttribute("aria-expanded", "true");
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add("hidden");
+
+      mobileMenu.setAttribute("aria-hidden", "true");
+      menuBtn.setAttribute("aria-expanded", "false");
+    }
+
+    menuBtn?.addEventListener("click", openMenu);
+    menuCloseBtn?.addEventListener("click", closeMenu);
+
+    document.querySelectorAll("#mobileMenu a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  </script>
+
+</body>
+</html>
