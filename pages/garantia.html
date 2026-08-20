@@ -61,6 +61,7 @@
       -webkit-backdrop-filter: blur(20px);
     }
   </style>
+  <link rel="stylesheet" href="../eliminacion-form.css" />
 </head>
 
 <body class="min-h-screen overflow-x-hidden bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white">
@@ -681,58 +682,247 @@
             </div>
 
 
-            <!-- SOLICITUD -->
-            <div
-              class="rounded-3xl border border-slate-200 bg-slate-900 p-6 text-white sm:p-8"
-            >
+            <!-- =====================================================
+                 FORMULARIO DE SOLICITUD DE ELIMINACIÓN
+            ====================================================== -->
+            <section id="solicitud-eliminacion" aria-labelledby="titulo-formulario-eliminacion">
+              <div class="elimination-form-card rounded-3xl border border-slate-200 bg-white shadow-sm">
+                <div class="elimination-form-header">
+                  <div>
+                    <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-600">
+                      Solicitud de eliminación
+                    </p>
 
-              <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                    <h3
+                      id="titulo-formulario-eliminacion"
+                      class="mt-2 text-2xl font-black text-slate-900 sm:text-3xl"
+                    >
+                      Solicitud de Eliminación de Cuenta y Datos Personales
+                    </h3>
 
-                <div class="max-w-2xl">
+                    <p class="mt-3 max-w-3xl leading-7 text-slate-600">
+                      Ejercicio del Derecho de Cancelación y Supresión de Datos de Usuario (Vektra GPS)
+                    </p>
+                  </div>
 
-                  <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-400">
-                    ¿Quieres eliminar tus datos?
-                  </p>
-
-                  <h3 class="mt-2 text-2xl font-black">
-                    Solicita la eliminación de tu cuenta
-                  </h3>
-
-                  <p class="mt-3 leading-7 text-slate-300">
-                    Ponte en contacto con nuestro equipo para iniciar el
-                    proceso de validación y eliminación de tus datos.
-                  </p>
-
+                  <div class="elimination-form-badge" aria-label="Proceso seguro">
+                    <span class="elimination-form-badge-dot"></span>
+                    Proceso seguro
+                  </div>
                 </div>
 
+                <div class="p-6 sm:p-8 lg:p-10">
+                  <div class="mb-8 rounded-2xl border border-blue-100 bg-blue-50/70 p-5 sm:p-6">
+                    <p class="leading-7 text-slate-700">
+                      En cumplimiento con las políticas de Google Play y la normativa de protección de datos,
+                      puede solicitar la eliminación definitiva de su cuenta de usuario de Vektra GPS,
+                      así como la supresión de sus datos personales y registros de geolocalización asociados.
+                      Una vez enviada la solicitud, iniciamos el proceso de borrado de forma directa en
+                      nuestras bases de datos.
+                    </p>
+                  </div>
 
-                <a
-                  href="contacto.html"
-                  class="inline-flex shrink-0 items-center justify-center gap-2 rounded-2xl bg-blue-600 px-6 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-500"
-                >
-                  Solicitar eliminación
+                  <form id="eliminacionForm" class="space-y-10" novalidate>
+                    <!-- DATOS DE IDENTIFICACIÓN -->
+                    <fieldset>
+                      <legend class="elimination-form-section-title">
+                        <span class="elimination-form-step">1</span>
+                        Datos de identificación de la cuenta
+                      </legend>
 
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M5 12h14M13 6l6 6-6 6"
-                    />
-                  </svg>
+                      <div class="mt-6 grid gap-6 md:grid-cols-2">
+                        <div class="form-field">
+                          <label for="emailCuenta" class="form-label">
+                            Correo Electrónico Registrado en la App
+                            <span class="required-mark" aria-hidden="true">*</span>
+                          </label>
+                          <input
+                            id="emailCuenta"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            required
+                            class="form-input"
+                            placeholder="correo@ejemplo.com"
+                            aria-describedby="emailHelp emailError"
+                          />
+                          <p id="emailHelp" class="form-help">
+                            Ingrese el correo con el que accede a Vektra GPS.
+                          </p>
+                          <p id="emailError" class="form-error" role="alert"></p>
+                        </div>
 
-                </a>
+                        <div class="form-field">
+                          <label for="nombreCuenta" class="form-label">
+                            Nombre de Usuario o Nombre Completo
+                            <span class="required-mark" aria-hidden="true">*</span>
+                          </label>
+                          <input
+                            id="nombreCuenta"
+                            name="name"
+                            type="text"
+                            autocomplete="name"
+                            required
+                            minlength="2"
+                            class="form-input"
+                            placeholder="Ej. Juan Carlos Pérez"
+                            aria-describedby="nombreError"
+                          />
+                          <p id="nombreError" class="form-error" role="alert"></p>
+                        </div>
 
+                        <div class="form-field">
+                          <label for="telefonoCuenta" class="form-label">
+                            Teléfono Celular de Contacto
+                            <span class="optional-mark">(Opcional)</span>
+                          </label>
+                          <input
+                            id="telefonoCuenta"
+                            name="phone"
+                            type="tel"
+                            inputmode="tel"
+                            autocomplete="tel"
+                            class="form-input"
+                            placeholder="Ej. 0991234567"
+                          />
+                          <p class="form-help">
+                            Puede ayudarnos a validar la solicitud si fuera necesario.
+                          </p>
+                        </div>
+
+                        <div class="form-field">
+                          <label for="identificadorGPS" class="form-label">
+                            Placa del Vehículo o ID de Dispositivo GPS
+                            <span class="optional-mark">(Opcional)</span>
+                          </label>
+                          <input
+                            id="identificadorGPS"
+                            name="vehicleOrGpsId"
+                            type="text"
+                            class="form-input"
+                            placeholder="Ej. PBC-1234"
+                          />
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <!-- OPCIONES DE ELIMINACIÓN -->
+                    <fieldset>
+                      <legend class="elimination-form-section-title">
+                        <span class="elimination-form-step">2</span>
+                        Opciones de eliminación de datos
+                      </legend>
+
+                      <p class="mt-4 text-sm leading-6 text-slate-600">
+                        Seleccione el alcance de la eliminación requerida:
+                      </p>
+
+                      <div class="mt-5 grid gap-4">
+                        <label class="deletion-option">
+                          <input
+                            type="radio"
+                            name="deletionScope"
+                            value="complete"
+                            checked
+                          />
+                          <span class="deletion-option-content">
+                            <span class="deletion-option-title">
+                              Eliminación Completa de la Cuenta y Datos Asociados
+                              <span class="recommended-tag">Recomendado Google Play</span>
+                            </span>
+                            <span class="deletion-option-description">
+                              Cierre definitivo de la cuenta, revocación de credenciales, eliminación de perfil,
+                              borrado de historial de geolocalización, rutas, alertas y métricas de telemetría.
+                            </span>
+                          </span>
+                        </label>
+
+                        <label class="deletion-option">
+                          <input
+                            type="radio"
+                            name="deletionScope"
+                            value="partial"
+                          />
+                          <span class="deletion-option-content">
+                            <span class="deletion-option-title">
+                              Eliminación Parcial
+                            </span>
+                            <span class="deletion-option-description">
+                              Mantener la cuenta activa pero eliminar todo el registro de trayectos,
+                              geocercas e historial GPS acumulado.
+                            </span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+
+                    <!-- CONSERVACIÓN -->
+                    <div class="retention-notice">
+                      <div class="retention-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" class="h-6 w-6">
+                          <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                        </svg>
+                      </div>
+
+                      <div>
+                        <h4 class="font-black text-slate-900">
+                          Aviso de Conservación Legítima
+                        </h4>
+                        <p class="mt-2 leading-7 text-slate-700">
+                          Al solicitar la eliminación de su cuenta, sus datos de perfil y registros de rastreo
+                          serán eliminados. No obstante, Vektra GPS conservará exclusivamente aquellos registros
+                          financieros y facturas estrictamente requeridos por la legislación fiscal tributaria (SRI)
+                          o para fines de cumplimiento legal, conforme a los Arts. 15 y 17 de la LOPDP.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- CONFIRMACIÓN -->
+                    <div class="space-y-5">
+                      <label class="confirmation-check">
+                        <input
+                          id="confirmacionEliminacion"
+                          name="confirmation"
+                          type="checkbox"
+                          required
+                        />
+                        <span>
+                          Confirmo que deseo proceder con la eliminación de mi cuenta y/o datos personales
+                          asociados a Vektra GPS.
+                        </span>
+                      </label>
+
+                      <p id="confirmationError" class="form-error" role="alert"></p>
+
+                      <div class="form-actions">
+                        <button
+                          type="submit"
+                          id="submitEliminacion"
+                          class="elimination-submit-btn"
+                        >
+                          <span>Confirmar y Eliminar Mi Cuenta</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- ESTADO -->
+                    <div
+                      id="formStatus"
+                      class="hidden"
+                      role="status"
+                      aria-live="polite"
+                    ></div>
+                  </form>
+                </div>
               </div>
-
-            </div>
-
+            </section>
 
             <!-- ACTUALIZACIÓN -->
             <div class="border-t border-slate-200 pt-6">
@@ -990,6 +1180,7 @@
 
 
 <script src="../app.js"></script>
+<script src="../eliminacion-form.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,354 @@
+/* =========================================================
+   VEKTRA — FORMULARIO DE ELIMINACIÓN DE DATOS
+   Archivo: eliminacion-form.css
+   ========================================================= */
+
+.elimination-form-card {
+  overflow: hidden;
+}
+
+.elimination-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid rgb(226 232 240 / 0.85);
+  background:
+    radial-gradient(circle at 90% 0%, rgb(96 165 250 / 0.16), transparent 34%),
+    linear-gradient(135deg, rgb(248 250 252), rgb(255 255 255));
+}
+
+.elimination-form-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgb(191 219 254);
+  border-radius: 999px;
+  background: rgb(239 246 255 / 0.9);
+  color: rgb(29 78 216);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.elimination-form-badge-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: rgb(34 197 94);
+  box-shadow: 0 0 0 4px rgb(34 197 94 / 0.12);
+}
+
+.elimination-form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgb(15 23 42);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.elimination-form-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  background: rgb(37 99 235);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgb(37 99 235 / 0.18);
+}
+
+.form-field {
+  min-width: 0;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: rgb(15 23 42);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.required-mark {
+  color: rgb(220 38 38);
+}
+
+.optional-mark {
+  color: rgb(100 116 139);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.form-input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgb(203 213 225);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 0.96);
+  color: rgb(15 23 42);
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.form-input::placeholder {
+  color: rgb(148 163 184);
+}
+
+.form-input:hover {
+  border-color: rgb(147 197 253);
+}
+
+.form-input:focus {
+  border-color: rgb(37 99 235);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgb(37 99 235 / 0.11);
+  transform: translateY(-1px);
+}
+
+.form-input.input-invalid {
+  border-color: rgb(220 38 38);
+  box-shadow: 0 0 0 4px rgb(220 38 38 / 0.09);
+}
+
+.form-help {
+  margin-top: 0.5rem;
+  color: rgb(100 116 139);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.form-error {
+  min-height: 1.2rem;
+  margin-top: 0.45rem;
+  color: rgb(185 28 28);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.deletion-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem;
+  border: 1px solid rgb(226 232 240);
+  border-radius: 1.15rem;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.deletion-option:hover {
+  border-color: rgb(147 197 253);
+  background: rgb(248 250 252);
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.05);
+  transform: translateY(-1px);
+}
+
+.deletion-option:has(input:checked) {
+  border-color: rgb(96 165 250);
+  background: rgb(239 246 255 / 0.7);
+  box-shadow: 0 10px 30px rgb(37 99 235 / 0.08);
+}
+
+.deletion-option input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2rem;
+  accent-color: rgb(37 99 235);
+  flex-shrink: 0;
+}
+
+.deletion-option-content {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.deletion-option-title {
+  color: rgb(15 23 42);
+  font-size: 0.94rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.deletion-option-description {
+  color: rgb(71 85 105);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.recommended-tag {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  background: rgb(219 234 254);
+  color: rgb(30 64 175);
+  font-size: 0.68rem;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.retention-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgb(253 230 138);
+  border-radius: 1.5rem;
+  background: rgb(255 251 235);
+}
+
+.retention-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background: rgb(245 158 11);
+  color: #fff;
+  box-shadow: 0 8px 18px rgb(245 158 11 / 0.18);
+}
+
+.confirmation-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: 1px solid rgb(226 232 240);
+  border-radius: 1rem;
+  background: rgb(248 250 252 / 0.75);
+  color: rgb(51 65 85);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.confirmation-check:has(input:checked) {
+  border-color: rgb(147 197 253);
+  background: rgb(239 246 255 / 0.7);
+}
+
+.confirmation-check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  accent-color: rgb(37 99 235);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.elimination-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 3.35rem;
+  padding: 0.85rem 1.25rem;
+  border: 0;
+  border-radius: 1rem;
+  background: rgb(37 99 235);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 900;
+  box-shadow: 0 12px 25px rgb(37 99 235 / 0.2);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease;
+}
+
+.elimination-submit-btn:hover {
+  background: rgb(29 78 216);
+  box-shadow: 0 16px 30px rgb(37 99 235 / 0.24);
+  transform: translateY(-2px);
+}
+
+.elimination-submit-btn:focus-visible {
+  outline: 3px solid rgb(147 197 253);
+  outline-offset: 3px;
+}
+
+.elimination-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+#formStatus {
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+#formStatus.status-success {
+  display: block;
+  border: 1px solid rgb(187 247 208);
+  background: rgb(240 253 244);
+  color: rgb(22 101 52);
+}
+
+#formStatus.status-error {
+  display: block;
+  border: 1px solid rgb(254 202 202);
+  background: rgb(254 242 242);
+  color: rgb(153 27 27);
+}
+
+@media (max-width: 640px) {
+  .elimination-form-header {
+    flex-direction: column;
+  }
+
+  .elimination-form-badge {
+    align-self: flex-start;
+  }
+
+  .form-actions {
+    justify-content: stretch;
+  }
+
+  .elimination-submit-btn {
+    width: 100%;
+  }
+
+  .recommended-tag {
+    margin-top: 0.35rem;
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-input,
+  .deletion-option,
+  .elimination-submit-btn {
+    transition: none;
+  }
+}
